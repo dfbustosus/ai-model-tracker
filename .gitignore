@@ -2,8 +2,10 @@
 node_modules
 .pnp
 .pnp.js
+.pnp.cjs
+.yarn/install-state.gz
 
-# Build
+# Build output
 dist
 dist-ssr
 build
@@ -21,20 +23,47 @@ lerna-debug.log*
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+!.vscode/settings.json
 .idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.sublime-workspace
+*.sublime-project
 
-# OS
+# OS files
 .DS_Store
+.DS_Store?
+._*
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Environment
+# Environment variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
+
+# Testing
+coverage
+*.lcov
+.nyc_output
+
+# Cache
+.cache
+.parcel-cache
+.eslintcache
+.prettiercache
+*.tsbuildinfo
+
+# Misc
+*.pem
+*.p12
+*.key
+*.cert
+.vercel
+.netlify
+.turbo
