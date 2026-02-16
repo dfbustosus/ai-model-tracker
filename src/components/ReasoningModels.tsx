@@ -16,7 +16,7 @@ export function ReasoningModels() {
   return (
     <div className="grid gap-3">
       {reasoningModels.map(model => (
-        <div key={model.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 transition-colors">
+        <div key={model.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 hover:bg-surface-900 hover:shadow-lg transition-all">
           <div className="flex items-start justify-between gap-3 flex-wrap">
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">

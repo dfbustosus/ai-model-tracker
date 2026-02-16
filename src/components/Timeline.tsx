@@ -35,20 +35,21 @@ export function Timeline() {
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
         <input
           type="text"
-          placeholder="Search models..."
+          placeholder="Search by model name or provider..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
-          className="flex-1 px-4 py-2.5 bg-surface-900 border border-surface-700 rounded-xl text-sm text-white placeholder:text-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          className="flex-1 px-4 py-3 bg-surface-900/50 border border-surface-700 rounded-xl text-sm text-white placeholder:text-surface-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500/50 focus:bg-surface-900 transition-all"
+          aria-label="Search models"
         />
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-2">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium capitalize transition-all ${
+              className={`px-3.5 py-2 rounded-lg text-xs font-semibold capitalize transition-all whitespace-nowrap ${
                 filter === cat
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-surface-800 text-surface-400 hover:text-white hover:bg-surface-700'
+                  ? 'bg-primary-600 text-white shadow-lg shadow-primary-600/30'
+                  : 'bg-surface-800/70 text-surface-400 hover:text-white hover:bg-surface-700 hover:shadow-md'
               }`}
             >
               {cat === 'all' ? 'All' : cat.replace('-', ' ')}
@@ -57,7 +58,19 @@ export function Timeline() {
         </div>
       </div>
 
-      <div className="text-xs text-surface-500 mb-4">{filtered.length} models found</div>
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-sm text-surface-400">
+          <span className="font-semibold text-white">{filtered.length}</span> model{filtered.length !== 1 ? 's' : ''} found
+        </div>
+        {(searchQuery || filter !== 'all') && (
+          <button
+            onClick={() => { setSearchQuery(''); setFilter('all'); }}
+            className="text-xs text-primary-400 hover:text-primary-300 font-medium"
+          >
+            Clear filters
+          </button>
+        )}
+      </div>
 
       <div className="relative">
         <div className="absolute left-4 top-0 bottom-0 w-px bg-surface-800" />

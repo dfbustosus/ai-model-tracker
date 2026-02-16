@@ -12,7 +12,7 @@ export function CodingToolsSection() {
 
       <div className="grid gap-3">
         {codingTools.map(tool => (
-          <div key={tool.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 transition-colors group">
+          <div key={tool.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 hover:bg-surface-900 hover:shadow-lg transition-all group">
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">

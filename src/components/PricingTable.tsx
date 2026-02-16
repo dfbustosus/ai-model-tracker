@@ -25,26 +25,26 @@ export function PricingTable() {
   return (
     <div>
       <div className="flex flex-col sm:flex-row gap-3 mb-6">
-        <div className="flex gap-1.5">
+        <div className="flex gap-2">
           <button
             onClick={() => setView('table')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium ${view === 'table' ? 'bg-primary-600 text-white' : 'bg-surface-800 text-surface-400'}`}
+            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${view === 'table' ? 'bg-primary-600 text-white shadow-lg shadow-primary-600/30' : 'bg-surface-800/70 text-surface-400 hover:text-white hover:bg-surface-700'}`}
           >
             Table
           </button>
           <button
             onClick={() => setView('chart')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium ${view === 'chart' ? 'bg-primary-600 text-white' : 'bg-surface-800 text-surface-400'}`}
+            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${view === 'chart' ? 'bg-primary-600 text-white shadow-lg shadow-primary-600/30' : 'bg-surface-800/70 text-surface-400 hover:text-white hover:bg-surface-700'}`}
           >
             Chart
           </button>
         </div>
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-2">
           {(['all', 'Budget', 'Mid', 'High', 'Premium', 'Ultra'] as TierFilter[]).map(t => (
             <button
               key={t}
               onClick={() => setTierFilter(t)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium ${tierFilter === t ? 'bg-primary-600 text-white' : 'bg-surface-800 text-surface-400 hover:text-white'}`}
+              className={`px-3.5 py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap ${tierFilter === t ? 'bg-primary-600 text-white shadow-lg shadow-primary-600/30' : 'bg-surface-800/70 text-surface-400 hover:text-white hover:bg-surface-700 hover:shadow-md'}`}
             >
               {t === 'all' ? 'All Tiers' : t}
             </button>

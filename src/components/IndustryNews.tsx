@@ -62,7 +62,7 @@ export function IndustryNews() {
     <div className="space-y-8">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {news.map(item => (
-          <div key={item.title} className="bg-surface-900/50 border border-surface-800 rounded-xl p-5 hover:border-surface-600 transition-colors">
+          <div key={item.title} className="bg-surface-900/50 border border-surface-800 rounded-xl p-5 hover:border-surface-600 hover:bg-surface-900 hover:shadow-lg transition-all">
             <item.icon className={`w-6 h-6 ${item.color} mb-3`} />
             <h3 className="font-semibold text-white text-sm mb-2">{item.title}</h3>
             <p className="text-xs text-surface-400 leading-relaxed">{item.content}</p>
