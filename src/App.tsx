@@ -5,6 +5,7 @@ import { StatsBar } from './components/StatsBar';
 import { SectionWrapper } from './components/SectionWrapper';
 import { Timeline } from './components/Timeline';
 import { Footer } from './components/Footer';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy-load chart-heavy sections to reduce initial bundle
 const BenchmarkCharts = lazy(() => import('./components/BenchmarkCharts').then(m => ({ default: m.BenchmarkCharts })));
@@ -66,20 +67,24 @@ function App() {
               subtitle="Google and Anthropic trading the lead. MMLU and MATH-500 have saturated - the field has shifted to harder evaluations."
               badge="Benchmarks"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <BenchmarkCharts />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load benchmarks">
+                <Suspense fallback={<SectionLoader />}>
+                  <BenchmarkCharts />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
               id="pricing"
               title="API Pricing Comparison"
-              subtitle="A 350x cost range: from $0.28/MTok (DeepSeek V3.2) to $80/MTok (o3-pro). Pricing as of February 2026."
+              subtitle="A 570x cost range: from $0.14/MTok (DeepSeek V3.2) to $80/MTok (o3-pro). Pricing as of February 2026."
               badge="Pricing"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <PricingTable />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load pricing">
+                <Suspense fallback={<SectionLoader />}>
+                  <PricingTable />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
@@ -88,9 +93,11 @@ function App() {
               subtitle="The sharpest competitive frontier. Extended thinking, chain-of-thought, and reinforcement learning approaches compared."
               badge="Reasoning"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <ReasoningModels />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load reasoning models">
+                <Suspense fallback={<SectionLoader />}>
+                  <ReasoningModels />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
@@ -99,9 +106,11 @@ function App() {
               subtitle="Models under 10B parameters now match GPT-4-class systems from 2023. Edge-deployable on phones, laptops, and IoT."
               badge="SLMs"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <SmallModelsTable />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load small models">
+                <Suspense fallback={<SectionLoader />}>
+                  <SmallModelsTable />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
@@ -110,9 +119,11 @@ function App() {
               subtitle="Text, vision, video, audio, and generation capabilities across providers."
               badge="Multimodal"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <MultimodalSection />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load multimodal section">
+                <Suspense fallback={<SectionLoader />}>
+                  <MultimodalSection />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
@@ -121,9 +132,11 @@ function App() {
               subtitle="A $5B+ market. From IDE assistants to terminal agents to fully autonomous coding systems."
               badge="Coding"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <CodingToolsSection />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load coding tools">
+                <Suspense fallback={<SectionLoader />}>
+                  <CodingToolsSection />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
@@ -132,9 +145,11 @@ function App() {
               subtitle="Production-quality inference on consumer hardware. GGUF standardization and better quantization drive adoption."
               badge="Local"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <LocalLLMsSection />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load local LLM tools">
+                <Suspense fallback={<SectionLoader />}>
+                  <LocalLLMsSection />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
@@ -143,9 +158,11 @@ function App() {
               subtitle="The gap has narrowed to its smallest point ever - approximately 3 months as of early 2026."
               badge="Analysis"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <OpenVsClosedSection />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load comparison">
+                <Suspense fallback={<SectionLoader />}>
+                  <OpenVsClosedSection />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
 
             <SectionWrapper
@@ -154,9 +171,11 @@ function App() {
               subtitle="Funding, infrastructure, and the forces shaping AI in 2026."
               badge="Industry"
             >
-              <Suspense fallback={<SectionLoader />}>
-                <IndustryNews />
-              </Suspense>
+              <ErrorBoundary fallbackTitle="Failed to load industry news">
+                <Suspense fallback={<SectionLoader />}>
+                  <IndustryNews />
+                </Suspense>
+              </ErrorBoundary>
             </SectionWrapper>
           </div>
         </div>
