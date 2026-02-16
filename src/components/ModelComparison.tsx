@@ -190,13 +190,13 @@ export function ModelComparison() {
   );
 }
 
-interface ComparisonRowProps {
+interface ComparisonRowProps<T = string | number> {
   label: string;
-  values: any[];
-  renderValue?: (value: any) => React.ReactNode;
+  values: T[];
+  renderValue?: (value: T) => React.ReactNode;
 }
 
-function ComparisonRow({ label, values, renderValue }: ComparisonRowProps) {
+function ComparisonRow<T = string | number>({ label, values, renderValue }: ComparisonRowProps<T>) {
   return (
     <tr className="border-b border-surface-800/50">
       <td className="py-2.5 px-3 text-surface-400 font-medium sticky left-0 bg-surface-950 z-10">
@@ -204,7 +204,7 @@ function ComparisonRow({ label, values, renderValue }: ComparisonRowProps) {
       </td>
       {values.map((value, i) => (
         <td key={i} className="py-2.5 px-3 text-surface-300">
-          {renderValue ? renderValue(value) : value}
+          {renderValue ? renderValue(value) : String(value)}
         </td>
       ))}
     </tr>
