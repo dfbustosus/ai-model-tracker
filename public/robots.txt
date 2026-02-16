@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dfbustosus.github.io/ai-model-tracker/sitemap.xml
