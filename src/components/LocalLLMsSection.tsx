@@ -16,7 +16,7 @@ export function LocalLLMsSection() {
 
       <div className="grid gap-3 md:grid-cols-2">
         {localTools.map(tool => (
-          <div key={tool.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 transition-colors">
+          <div key={tool.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 hover:bg-surface-900 hover:shadow-lg transition-all">
             <div className="flex items-center gap-2 mb-2">
               <HardDrive className="w-4 h-4 text-blue-400" />
               <h3 className="font-semibold text-white text-sm">{tool.name}</h3>

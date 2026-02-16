@@ -20,15 +20,15 @@ export function BenchmarkCharts() {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-1.5 mb-6">
+      <div className="flex flex-wrap gap-2 mb-6">
         {tabs.map(tab => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${
+            className={`px-4 py-2.5 rounded-xl text-xs font-semibold transition-all ${
               activeTab === tab.id
-                ? 'bg-primary-600 text-white'
-                : 'bg-surface-800 text-surface-400 hover:text-white hover:bg-surface-700'
+                ? 'bg-primary-600 text-white shadow-lg shadow-primary-600/30'
+                : 'bg-surface-800/70 text-surface-400 hover:text-white hover:bg-surface-700 hover:shadow-md'
             }`}
           >
             {tab.label}

@@ -10,8 +10,9 @@ export function ModelComparison() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const availableModels = modelReleases
-    .filter(m => searchQuery === '' || m.name.toLowerCase().includes(searchQuery.toLowerCase()))
-    .slice(0, 10);
+    .filter(m => !selectedModels.includes(m.id))
+    .filter(m => searchQuery === '' || m.name.toLowerCase().includes(searchQuery.toLowerCase()) || m.provider.toLowerCase().includes(searchQuery.toLowerCase()))
+    .slice(0, 20);
 
   const toggleModel = (id: string) => {
     if (selectedModels.includes(id)) {
@@ -49,14 +50,23 @@ export function ModelComparison() {
           <div className="text-xs text-surface-400 mb-3 font-medium">
             {selectedModels.length === 0 ? 'Select models to compare:' : 'Add more models to compare:'}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {availableModels
-              .filter(model => !selectedModels.includes(model.id))
-              .map(model => (
+          {availableModels.length === 0 ? (
+            <div className="p-8 text-center bg-surface-900/50 border border-surface-800 rounded-xl">
+              <p className="text-sm text-surface-400">No models found matching "{searchQuery}"</p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="mt-2 text-xs text-primary-400 hover:text-primary-300"
+              >
+                Clear search
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {availableModels.map(model => (
                 <button
                   key={model.id}
                   onClick={() => toggleModel(model.id)}
-                  className="text-left p-4 bg-surface-900/50 border border-surface-800 rounded-xl hover:border-primary-500 transition-colors group"
+                  className="text-left p-4 bg-surface-900/50 border border-surface-800 rounded-xl hover:border-primary-500 hover:bg-surface-900 hover:shadow-lg transition-all group"
                 >
                   <div className="flex items-center gap-2 mb-1">
                     <span
@@ -70,7 +80,8 @@ export function ModelComparison() {
                   <p className="text-xs text-surface-400 line-clamp-2">{model.notable}</p>
                 </button>
               ))}
-          </div>
+            </div>
+          )}
         </div>
       )}
 

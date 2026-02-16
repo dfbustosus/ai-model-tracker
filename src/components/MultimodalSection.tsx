@@ -32,7 +32,7 @@ export function MultimodalSection() {
             </thead>
             <tbody>
               {modalityMatrix.map(row => (
-                <tr key={row.model} className="border-t border-surface-800/50 hover:bg-surface-800/30">
+                <tr key={row.model} className="border-t border-surface-800/50 hover:bg-surface-800/50 transition-colors">
                   <td className="py-2.5 px-4">
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full" style={{ backgroundColor: PROVIDER_COLORS[row.provider] }} />

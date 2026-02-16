@@ -17,7 +17,7 @@ export function SmallModelsTable() {
 
       <div className="grid gap-3 md:grid-cols-2">
         {smallModels.map(model => (
-          <div key={model.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 transition-colors">
+          <div key={model.name} className="bg-surface-900/50 border border-surface-800 rounded-xl p-4 hover:border-surface-600 hover:bg-surface-900 hover:shadow-lg transition-all">
             <div className="flex items-center gap-2 mb-2">
               <Cpu className="w-4 h-4 text-primary-400" />
               <h3 className="font-semibold text-white text-sm">{model.name}</h3>

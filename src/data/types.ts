@@ -92,24 +92,24 @@ export interface ModalityEntry {
 }
 
 export const PROVIDER_COLORS: Record<string, string> = {
-  'OpenAI': '#10a37f',
-  'Anthropic': '#d4a574',
-  'Google': '#4285f4',
-  'Meta': '#0668e1',
-  'DeepSeek': '#4a90d9',
-  'Mistral': '#f97316',
-  'xAI': '#1d9bf0',
-  'Alibaba': '#ff6a00',
-  'Microsoft': '#00a4ef',
-  'Cohere': '#39594d',
-  'Stability AI': '#7c3aed',
-  'Black Forest Labs': '#ec4899',
-  'Midjourney': '#e11d48',
-  'Runway': '#06b6d4',
-  'Kuaishou': '#f59e0b',
-  'Amazon': '#ff9900',
-  'MiniMax': '#6d28d9',
-  'Moonshot': '#0ea5e9',
-  'Zhipu': '#dc2626',
-  'Apple': '#a3a3a3',
+  'OpenAI': '#10b981',        // Vibrant emerald green
+  'Anthropic': '#f59e0b',     // Bright amber/gold
+  'Google': '#3b82f6',        // Vivid blue
+  'Meta': '#0ea5e9',          // Bright sky blue
+  'DeepSeek': '#6366f1',      // Vibrant indigo
+  'Mistral': '#f97316',       // Bold orange (kept)
+  'xAI': '#06b6d4',           // Bright cyan
+  'Alibaba': '#ff6a00',       // Vibrant orange (kept)
+  'Microsoft': '#0ea5e9',     // Bright sky blue
+  'Cohere': '#14b8a6',        // Vibrant teal
+  'Stability AI': '#8b5cf6',  // Bright violet
+  'Black Forest Labs': '#ec4899', // Hot pink (kept)
+  'Midjourney': '#f43f5e',    // Bright rose
+  'Runway': '#14b8a6',        // Vibrant teal
+  'Kuaishou': '#facc15',      // Bright yellow
+  'Amazon': '#f97316',        // Bold orange
+  'MiniMax': '#a855f7',       // Bright purple
+  'Moonshot': '#06b6d4',      // Bright cyan
+  'Zhipu': '#ef4444',         // Vibrant red
+  'Apple': '#94a3b8',         // Light slate gray
 };

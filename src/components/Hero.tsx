@@ -23,18 +23,18 @@ export function Hero({ onNavigate }: HeroProps) {
           <p className="text-sm text-surface-500 max-w-xl mx-auto mb-8">
             Compare 80+ models across benchmarks, pricing, and capabilities. From GPT-5.2 to Gemini 3 Deep Think to DeepSeek V3.2.
           </p>
-          <div className="flex items-center justify-center gap-3 flex-wrap mb-4">
+          <div className="flex items-center justify-center gap-4 flex-wrap mb-6">
             <button
               onClick={() => onNavigate('timeline')}
-              className="px-6 py-2.5 bg-primary-600 hover:bg-primary-500 text-white rounded-xl text-sm font-medium transition-colors"
+              className="px-8 py-3.5 bg-primary-600 hover:bg-primary-500 text-white rounded-xl text-sm font-bold transition-all shadow-lg shadow-primary-600/30 hover:shadow-primary-600/50 hover:scale-105"
             >
               Explore Models
             </button>
             <button
-              onClick={() => onNavigate('benchmarks')}
-              className="px-6 py-2.5 bg-surface-800 hover:bg-surface-700 text-white rounded-xl text-sm font-medium transition-colors border border-surface-700"
+              onClick={() => onNavigate('compare')}
+              className="px-8 py-3.5 bg-surface-800 hover:bg-surface-700 text-white rounded-xl text-sm font-bold transition-all border border-surface-700 hover:border-surface-600 hover:shadow-lg"
             >
-              View Benchmarks
+              Compare Models
             </button>
           </div>
           <div className="flex items-center justify-center gap-2 mb-6">
