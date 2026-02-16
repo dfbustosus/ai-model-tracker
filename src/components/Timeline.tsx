@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { FileText, ExternalLink } from 'lucide-react';
 import { modelReleases } from '../data/models';
 import { PROVIDER_COLORS } from '../data/types';
 
@@ -96,6 +97,34 @@ export function Timeline() {
                             <span className="text-green-400">${model.costOutput}/MTok output</span>
                           )}
                         </div>
+                        {(model.paperUrl || model.blogUrl) && (
+                          <div className="flex gap-2 mt-3">
+                            {model.paperUrl && (
+                              <a
+                                href={model.paperUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-800 text-surface-300 hover:text-white hover:bg-surface-700 transition-colors text-[11px] font-medium"
+                                aria-label="View research paper"
+                              >
+                                <FileText className="w-3 h-3" />
+                                Paper
+                              </a>
+                            )}
+                            {model.blogUrl && (
+                              <a
+                                href={model.blogUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-800 text-surface-300 hover:text-white hover:bg-surface-700 transition-colors text-[11px] font-medium"
+                                aria-label="View blog post"
+                              >
+                                <ExternalLink className="w-3 h-3" />
+                                Blog
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </div>
                       <span className="text-[10px] text-surface-500 whitespace-nowrap mt-0.5">
                         {new Date(model.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}

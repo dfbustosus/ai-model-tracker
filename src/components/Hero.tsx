@@ -1,4 +1,4 @@
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Share2 } from 'lucide-react';
 
 interface HeroProps {
   onNavigate: (section: string) => void;
@@ -23,7 +23,7 @@ export function Hero({ onNavigate }: HeroProps) {
           <p className="text-sm text-surface-500 max-w-xl mx-auto mb-8">
             Compare 80+ models across benchmarks, pricing, and capabilities. From GPT-5.2 to Gemini 3 Deep Think to DeepSeek V3.2.
           </p>
-          <div className="flex items-center justify-center gap-3 flex-wrap">
+          <div className="flex items-center justify-center gap-3 flex-wrap mb-4">
             <button
               onClick={() => onNavigate('timeline')}
               className="px-6 py-2.5 bg-primary-600 hover:bg-primary-500 text-white rounded-xl text-sm font-medium transition-colors"
@@ -36,6 +36,28 @@ export function Hero({ onNavigate }: HeroProps) {
             >
               View Benchmarks
             </button>
+          </div>
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <a
+              href="https://twitter.com/intent/tweet?text=AI%20Model%20Tracker%20%E2%80%93%20Track%2060%2B%20AI%20models%20with%20benchmarks%2C%20pricing%2C%20and%20papers&url=https://dfbustosus.github.io/ai-model-tracker/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-800/50 text-surface-400 hover:text-white hover:bg-surface-700 transition-colors text-xs"
+              aria-label="Share on Twitter"
+            >
+              <Share2 className="w-3.5 h-3.5" />
+              <span>Share on Twitter</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/sharing/share-offsite/?url=https://dfbustosus.github.io/ai-model-tracker/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-800/50 text-surface-400 hover:text-white hover:bg-surface-700 transition-colors text-xs"
+              aria-label="Share on LinkedIn"
+            >
+              <Share2 className="w-3.5 h-3.5" />
+              <span>Share on LinkedIn</span>
+            </a>
           </div>
           <button
             onClick={() => onNavigate('timeline')}
