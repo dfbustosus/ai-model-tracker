@@ -143,6 +143,12 @@ src/
 | Open vs closed gap | ~3 months |
 | Data currency | February 2026 |
 
+## Embed & Share
+
+Want to showcase this on your site? See [EMBED.md](EMBED.md) for badges, widgets, and citation formats.
+
+[![AI Model Tracker](https://img.shields.io/badge/AI_Models-60%2B_Tracked-4f46e5?style=for-the-badge)](https://dfbustosus.github.io/ai-model-tracker/)
+
 ## Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
