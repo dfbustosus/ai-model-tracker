@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { StatsBar } from './components/StatsBar';
 import { SectionWrapper } from './components/SectionWrapper';
 import { Timeline } from './components/Timeline';
+import { ModelComparison } from './components/ModelComparison';
 import { Footer } from './components/Footer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -59,6 +60,15 @@ function App() {
               badge="Timeline"
             >
               <Timeline />
+            </SectionWrapper>
+
+            <SectionWrapper
+              id="compare"
+              title="Model Comparison Tool"
+              subtitle="Select up to 3 models and compare them side-by-side across benchmarks, pricing, and features."
+              badge="Compare"
+            >
+              <ModelComparison />
             </SectionWrapper>
 
             <SectionWrapper

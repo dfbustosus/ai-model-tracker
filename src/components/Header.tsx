@@ -5,6 +5,7 @@ const REPO_URL = 'https://github.com/dfbustosus/ai-model-tracker';
 
 const navItems = [
   { id: 'timeline', label: 'Timeline' },
+  { id: 'compare', label: 'Compare' },
   { id: 'benchmarks', label: 'Benchmarks' },
   { id: 'pricing', label: 'Pricing' },
   { id: 'reasoning', label: 'Reasoning' },

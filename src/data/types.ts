@@ -17,6 +17,8 @@ export interface ModelRelease {
   costOutput?: number;
   notable: string;
   category: 'frontier' | 'reasoning' | 'small' | 'open-source' | 'multimodal' | 'coding' | 'image-gen' | 'video-gen';
+  paperUrl?: string;
+  blogUrl?: string;
 }
 
 export interface BenchmarkEntry {
