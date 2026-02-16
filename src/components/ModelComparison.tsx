@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, FileText, ExternalLink, Check } from 'lucide-react';
+import { X, FileText, ExternalLink } from 'lucide-react';
 import { modelReleases } from '../data/models';
 import { pricingData } from '../data/pricing';
 import { reasoningBenchmarks } from '../data/benchmarks';
@@ -44,26 +44,33 @@ export function ModelComparison() {
         </div>
       </div>
 
-      {selectedModels.length === 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
-          {availableModels.map(model => (
-            <button
-              key={model.id}
-              onClick={() => toggleModel(model.id)}
-              className="text-left p-4 bg-surface-900/50 border border-surface-800 rounded-xl hover:border-primary-500 transition-colors group"
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <span
-                  className="px-2 py-0.5 rounded-md text-[10px] font-bold text-white uppercase"
-                  style={{ backgroundColor: PROVIDER_COLORS[model.provider] || '#6366f1' }}
+      {selectedModels.length < 3 && (
+        <div className="mb-6">
+          <div className="text-xs text-surface-400 mb-3 font-medium">
+            {selectedModels.length === 0 ? 'Select models to compare:' : 'Add more models to compare:'}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {availableModels
+              .filter(model => !selectedModels.includes(model.id))
+              .map(model => (
+                <button
+                  key={model.id}
+                  onClick={() => toggleModel(model.id)}
+                  className="text-left p-4 bg-surface-900/50 border border-surface-800 rounded-xl hover:border-primary-500 transition-colors group"
                 >
-                  {model.provider}
-                </span>
-                <span className="font-medium text-white text-sm">{model.name}</span>
-              </div>
-              <p className="text-xs text-surface-400 line-clamp-2">{model.notable}</p>
-            </button>
-          ))}
+                  <div className="flex items-center gap-2 mb-1">
+                    <span
+                      className="px-2 py-0.5 rounded-md text-[10px] font-bold text-white uppercase"
+                      style={{ backgroundColor: PROVIDER_COLORS[model.provider] || '#6366f1' }}
+                    >
+                      {model.provider}
+                    </span>
+                    <span className="font-medium text-white text-sm">{model.name}</span>
+                  </div>
+                  <p className="text-xs text-surface-400 line-clamp-2">{model.notable}</p>
+                </button>
+              ))}
+          </div>
         </div>
       )}
 
@@ -180,12 +187,6 @@ export function ModelComparison() {
         </div>
       )}
 
-      {selectedModels.length > 0 && selectedModels.length < 3 && (
-        <div className="mt-6 p-4 bg-primary-600/10 border border-primary-600/20 rounded-xl text-sm text-primary-300">
-          <Check className="w-4 h-4 inline-block mr-2" />
-          Add {3 - selectedModels.length} more model{selectedModels.length === 2 ? '' : 's'} to compare
-        </div>
-      )}
     </div>
   );
 }
