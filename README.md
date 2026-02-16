@@ -6,9 +6,12 @@
 
 Track, compare, and visualize **80+ AI models** across benchmarks, pricing, and capabilities.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-4f46e5?style=for-the-badge&logo=github)](https://dfbustosus.github.io/ai-model-tracker)
+### [**Visit Live Site**](https://dfbustosus.github.io/ai-model-tracker/)
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-4f46e5?style=for-the-badge&logo=github)](https://dfbustosus.github.io/ai-model-tracker/)
 [![GitHub Stars](https://img.shields.io/github/stars/dfbustosus/ai-model-tracker?style=for-the-badge&logo=github&color=yellow)](https://github.com/dfbustosus/ai-model-tracker/stargazers)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/dfbustosus/ai-model-tracker/ci.yml?style=for-the-badge&label=CI&logo=githubactions&logoColor=white)](https://github.com/dfbustosus/ai-model-tracker/actions/workflows/ci.yml)
 
 ![React](https://img.shields.io/badge/React_19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript_5.9-3178C6?logo=typescript&logoColor=white)
@@ -25,15 +28,15 @@ Track, compare, and visualize **80+ AI models** across benchmarks, pricing, and 
 
 The AI model landscape changes weekly. New releases, new benchmarks, new pricing — scattered across dozens of blog posts, tweets, and papers. This project puts **everything in one place** with interactive visualizations so you can actually make informed decisions.
 
-> **Last updated:** February 2026 &mdash; Data from 14+ providers, 55+ model releases, 8 benchmark categories
+> **Last updated:** February 2026 &mdash; Data from 14+ providers, 60+ model releases, 8 benchmark categories
 
 ## Features
 
 | Section | What You Get |
 |---------|-------------|
-| **Timeline** | 55+ model releases (Dec 2024 - Feb 2026) with search, filter by category |
+| **Timeline** | 60+ model releases (Dec 2024 - Feb 2026) with search, filter by category |
 | **Benchmarks** | Interactive charts: LMArena Elo, SWE-bench Verified, AIME 2025, GPQA Diamond, ARC-AGI-2, HLE, Aider Polyglot, MMLU-Pro |
-| **Pricing** | 25 models compared side-by-side with table/chart toggle and tier filtering (Budget to Ultra) |
+| **Pricing** | 28 models compared side-by-side with table/chart toggle and tier filtering (Budget to Ultra) |
 | **Reasoning** | Architecture deep-dive: o3 vs DeepSeek R1 vs Claude Extended Thinking vs Gemini Deep Think vs QwQ-32B |
 | **Small Models** | 16 edge-deployable models under 10B params — from Gemma 3 270M to Qwen3 8B |
 | **Multimodal** | Input/output modality matrix + video gen (Sora 2, Veo 3) + image gen (Midjourney v7, FLUX.1) |
@@ -53,12 +56,16 @@ npm run dev
 
 Open [http://localhost:5173](http://localhost:5173) and you're in.
 
-### Other Commands
+### Commands
 
 ```bash
-npm run build     # Production build (code-split, ~220KB initial)
-npm run preview   # Preview production build locally
-npm run lint      # ESLint check
+npm run dev         # Start dev server with HMR
+npm run build       # Production build (code-split, ~220KB initial)
+npm run preview     # Preview production build locally
+npm run lint        # ESLint check
+npm run lint:fix    # ESLint auto-fix
+npm run typecheck   # TypeScript type checking
+npm run format      # Format code with Prettier
 ```
 
 ## Tech Stack
@@ -80,30 +87,31 @@ src/
 ├── components/          # 15 React components
 │   ├── Header.tsx       # Fixed nav, 10 section links, mobile responsive
 │   ├── Hero.tsx         # Landing with radial gradient + CTAs
+│   ├── ErrorBoundary.tsx # Graceful error handling
 │   ├── Timeline.tsx     # Searchable/filterable model timeline
 │   ├── BenchmarkCharts.tsx  # 5-tab interactive charts (lazy-loaded)
 │   ├── PricingTable.tsx     # Table + chart views (lazy-loaded)
 │   ├── OpenVsClosedSection.tsx  # Comparison charts (lazy-loaded)
-│   └── ...              # 9 more section components
+│   └── ...              # 8 more section components
 ├── data/                # Pure TypeScript data layer
 │   ├── types.ts         # Interfaces + provider color map
-│   ├── models.ts        # 55+ model releases with full metadata
+│   ├── models.ts        # 60+ model releases with full metadata
 │   ├── benchmarks.ts    # Arena, SWE-bench, reasoning, Aider, MMLU
-│   ├── pricing.ts       # 25 models with input/output/tier
+│   ├── pricing.ts       # 28 models with input/output/tier
 │   ├── tools.ts         # Coding tools + local LLM tools
 │   ├── smallModels.ts   # 16 small language models
 │   └── multimodal.ts    # Modality matrix + video/image gen
 ├── App.tsx              # Main app with lazy loading + smooth scroll
 ├── main.tsx             # React root
-└── index.css            # Tailwind + custom theme (14 provider colors)
+└── index.css            # Tailwind + custom theme (20 provider colors)
 ```
 
 ## Performance
 
 - **Code-split**: 9 lazy-loaded sections, Recharts loaded on-demand
 - **Initial bundle**: ~220KB (down from 645KB monolith)
-- **Lighthouse**: Optimized for Core Web Vitals
-- **SEO**: Open Graph meta tags, semantic HTML, descriptive titles
+- **Error boundaries**: Graceful fallback on component failures
+- **SEO**: Open Graph + Twitter Card meta tags, semantic HTML, canonical URL
 
 ## Data Coverage
 
@@ -122,22 +130,22 @@ src/
 | Microsoft | Phi-4, Phi-4-mini/reasoning | 3.8B beats 70B distills |
 | MiniMax | M2.5 | SWE-bench 80.2% (open-weight) |
 | Moonshot | Kimi K2.5 | LiveCodeBench 85% |
-| + more | Cohere, Zhipu, Apple... | |
+| + more | Cohere, Zhipu, Amazon, Apple... | |
 
 ### Key Numbers
 
 | Metric | Value |
 |--------|-------|
-| Models tracked | 55+ |
+| Models tracked | 60+ |
 | Benchmark categories | 8 |
-| Price range | 350x ($0.14 - $80/MTok) |
+| Price range | 570x ($0.14 - $80/MTok) |
 | Providers | 14+ |
 | Open vs closed gap | ~3 months |
 | Data currency | February 2026 |
 
 ## Contributing
 
-We welcome contributions! The easiest way to help:
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ### Add a New Model
 
@@ -160,15 +168,21 @@ Use the [issue templates](https://github.com/dfbustosus/ai-model-tracker/issues/
 
 ## Deployment
 
-Auto-deploys to GitHub Pages on every push to `main` via GitHub Actions.
+Auto-deploys to GitHub Pages on every push to `main` via [GitHub Actions](.github/workflows/deploy.yml).
 
-To enable:
+**Live at: [https://dfbustosus.github.io/ai-model-tracker/](https://dfbustosus.github.io/ai-model-tracker/)**
+
+To deploy your own fork:
 1. Push to GitHub
 2. Go to **Settings > Pages**
 3. Set Source to **GitHub Actions**
 4. Your site is live at `https://<username>.github.io/ai-model-tracker/`
 
 Alternative: Deploy to Vercel or Netlify by connecting your repo — zero config needed.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for vulnerability disclosure policy.
 
 ## License
 
@@ -180,6 +194,6 @@ Alternative: Deploy to Vercel or Netlify by connecting your repo — zero config
 
 **If this helped you navigate the AI landscape, consider giving it a star.**
 
-[Report Bug](https://github.com/dfbustosus/ai-model-tracker/issues) · [Request Model](https://github.com/dfbustosus/ai-model-tracker/issues/new?template=new-model.md) · [Contribute](https://github.com/dfbustosus/ai-model-tracker/pulls)
+[Live Site](https://dfbustosus.github.io/ai-model-tracker/) · [Report Bug](https://github.com/dfbustosus/ai-model-tracker/issues) · [Request Model](https://github.com/dfbustosus/ai-model-tracker/issues/new?template=new-model.md) · [Contribute](CONTRIBUTING.md)
 
 </div>
