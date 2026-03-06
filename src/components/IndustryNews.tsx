@@ -1,10 +1,16 @@
-import { Building2, Rocket, TrendingUp, AlertTriangle, Cpu, Globe, UserX, Code } from 'lucide-react';
+import { Building2, Rocket, TrendingUp, AlertTriangle, Cpu, Globe, UserX, Code, Merge } from 'lucide-react';
 
 const news = [
   {
+    icon: Merge,
+    title: 'SpaceX Acquires xAI',
+    content: 'SpaceX acquired xAI (Feb 2, 2026) in a $1.25T combined valuation deal — the largest merger ever. Goal: orbital data centers for AI compute.',
+    color: 'text-cyan-400',
+  },
+  {
     icon: Building2,
     title: 'Record Funding',
-    content: 'Anthropic closed $30B at $380B valuation. OpenAI assembling ~$100B round at $830B valuation. Both expected to IPO in H2 2026.',
+    content: 'Anthropic closed $30B at $380B valuation ($14B ARR). OpenAI assembling ~$100B round at $830B valuation. Both expected to IPO in H2 2026.',
     color: 'text-primary-400',
   },
   {
@@ -16,13 +22,13 @@ const news = [
   {
     icon: TrendingUp,
     title: 'Agentic AI Paradigm',
-    content: "Models transitioning from assistants to autonomous agents. MCP (Anthropic's open standard) adopted by OpenAI, Microsoft, Google — donated to Linux Foundation.",
+    content: "Feb 2026: 7 frontier models launched in 28 days. Agent Teams (Claude), Codex on Cerebras (OpenAI), MCP now Linux Foundation standard.",
     color: 'text-green-400',
   },
   {
     icon: Code,
     title: 'AI Coding: $5B+ Market',
-    content: 'Named 2026 Breakthrough Technology by MIT Technology Review. Cursor $10B valuation, 50%+ of Fortune 500 adopted. Tools shifting from completion to autonomous agents.',
+    content: 'Named 2026 Breakthrough Technology by MIT Technology Review. Cognition acquires Windsurf ($250M). Claude Code $2.5B ARR. Cursor 2.0 ships cloud agents.',
     color: 'text-emerald-400',
   },
   {
@@ -39,22 +45,22 @@ const news = [
   },
   {
     icon: Cpu,
-    title: 'MoE Architectures Dominate',
-    content: "Llama 4, DeepSeek V3/R1, Mistral Large 3, Qwen3, and Apple's server model all use mixture-of-experts architectures.",
+    title: 'No-NVIDIA Frontier Models',
+    content: 'GLM-5 (744B) trained entirely on Huawei Ascend chips. GPT-5.3-Codex-Spark runs on Cerebras. NVIDIA dominance fracturing.',
     color: 'text-blue-400',
   },
   {
     icon: Globe,
     title: 'Chinese Models Rise',
-    content: 'Chinese models represent ~40% of the top 60 on Chatbot Arena. MiniMax M2.5, Kimi K2.5, GLM-4.7 all competitive with Western frontier models.',
+    content: 'GLM-5 (SWE-bench 77.8%), Qwen 3.5 (GPQA 88.4%), MiniMax M2.5 (SWE-bench 80.2%), Kimi K2.5 — all open-source, competitive with Western frontier models.',
     color: 'text-orange-400',
   },
 ];
 
 const keyTakeaways = [
-  { title: 'Open-Closed Gap', desc: '~3 months. DeepSeek V3.2 matches GPT-5 on AIME at 1/33rd the cost.' },
-  { title: 'Reasoning = New Scaling', desc: 'Inference-time compute yields outsized returns. GPT-5.2 perfect AIME, Gemini 3 Deep Think 84.6% ARC-AGI-2.' },
-  { title: "Coding is AI's Killer App", desc: 'Claude Code $2.5B ARR, Cursor $10B valuation, 25-30% of code at Big Tech is AI-generated.' },
+  { title: 'Open-Closed Gap Vanished', desc: 'MiniMax M2.5 80.2% vs Claude Opus 80.9% SWE-bench. GLM-5, Qwen 3.5 match frontier at 1/10th cost.' },
+  { title: 'Reasoning = New Scaling', desc: 'Gemini 3.1 Pro 100% AIME, 77.1% ARC-AGI-2. Deep Think 84.6% ARC-AGI-2. 18 unsolved research problems solved.' },
+  { title: "Coding is AI's Killer App", desc: 'Claude Code $2.5B ARR, Agent Teams ship. Cursor 2.0, GPT-5.3-Codex on Cerebras at 1000+ tok/s.' },
 ];
 
 export function IndustryNews() {
