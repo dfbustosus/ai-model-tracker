@@ -12,7 +12,7 @@ export function Hero({ onNavigate }: HeroProps) {
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-600/10 border border-primary-600/20 text-primary-400 text-xs font-medium mb-6">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            Updated February 2026
+            Updated March 2026
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4 leading-tight tracking-tight">
             AI Model Tracker
@@ -21,7 +21,7 @@ export function Hero({ onNavigate }: HeroProps) {
             The Complete 2025-2026 Landscape
           </p>
           <p className="text-sm text-surface-500 max-w-xl mx-auto mb-8">
-            Compare 80+ models across benchmarks, pricing, and capabilities. From GPT-5.2 to Gemini 3 Deep Think to DeepSeek V3.2.
+            Compare 90+ models across benchmarks, pricing, and capabilities. From Gemini 3.1 Pro to Claude Sonnet 4.6 to GLM-5.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap mb-6">
             <button

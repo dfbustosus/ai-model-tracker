@@ -7,8 +7,10 @@ const reasoningModels = [
   { name: 'DeepSeek R1', mechanism: 'GRPO RL + explicit <think> tags', params: '671B (37B active)', context: '128K', openSource: true, cost: '$2.19' },
   { name: 'Claude 3.7+ (Extended)', mechanism: 'Hybrid standard/thinking, budget-controllable', params: 'Undisclosed', context: '200K', openSource: false, cost: '$15.00' },
   { name: 'Gemini 2.5 Pro', mechanism: 'Built-in step-by-step reasoning', params: 'Undisclosed', context: '1M', openSource: false, cost: '$10.00' },
+  { name: 'Gemini 3.1 Pro', mechanism: 'Built-in reasoning, 100% AIME with code', params: 'Undisclosed', context: '1M', openSource: false, cost: '$12.00' },
   { name: 'Gemini 3 Deep Think', mechanism: 'Parallel extended reasoning', params: 'Undisclosed', context: '1M', openSource: false, cost: '~$12.00' },
   { name: 'QwQ-32B', mechanism: 'RL on Qwen2.5-32B, curiosity-driven', params: '32B', context: '131K', openSource: true, cost: 'Free (self-hosted)' },
+  { name: 'Qwen3.5-397B-A17B', mechanism: 'Hybrid thinking + visual agents', params: '397B (17B active)', context: '262K', openSource: true, cost: 'Free (self-hosted)' },
   { name: 'Qwen3-235B-A22B', mechanism: '4-stage hybrid thinking pipeline', params: '235B (22B active)', context: '128K', openSource: true, cost: 'Free (self-hosted)' },
 ];
 

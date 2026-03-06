@@ -1,10 +1,10 @@
 import type { CodingTool, LocalTool } from './types';
 
 export const codingTools: CodingTool[] = [
-  { name: 'GitHub Copilot', type: 'IDE plugin', pricing: 'Free-$39/mo', models: 'GPT-5 mini, GPT-4.1, Claude Opus 4.5/4.6', keyFeature: 'Agent Mode, Coding Agent for PRs, widest IDE support' },
-  { name: 'Cursor', type: 'AI-native IDE', pricing: 'Free-$200/mo', models: 'Claude Opus 4.5/4.6, GPT-5.2, Gemini 3', keyFeature: 'Background Agents, Mission Control, $10B valuation' },
-  { name: 'Claude Code', type: 'Terminal CLI', pricing: '$20-$200/mo', models: 'Claude Sonnet 4.5, Opus 4.5/4.6', keyFeature: 'Deep codebase understanding, $2.5B ARR, 30-hour sessions' },
-  { name: 'Windsurf', type: 'AI-native IDE + plugins', pricing: 'Free-$60/mo', models: 'Claude Opus 4.6, GPT-5.2-Codex, Gemini 3 Flash', keyFeature: 'Cascade agent, Arena Mode, Plan Mode' },
+  { name: 'GitHub Copilot', type: 'IDE plugin', pricing: 'Free-$39/mo', models: 'GPT-5.3-Codex, GPT-5 mini, Claude Opus 4.6', keyFeature: 'Agent Mode, Coding Agent for PRs, widest IDE support' },
+  { name: 'Cursor', type: 'AI-native IDE', pricing: 'Free-$200/mo', models: 'Claude Opus/Sonnet 4.6, GPT-5.3-Codex, Gemini 3.1', keyFeature: 'Cursor 2.0, Composer 1.5, cloud agents on isolated VMs' },
+  { name: 'Claude Code', type: 'Terminal CLI', pricing: '$20-$200/mo', models: 'Claude Sonnet 4.6, Opus 4.6', keyFeature: 'Agent Teams (2-16 agents), $2.5B ARR, 30-hour sessions' },
+  { name: 'Windsurf (Cognition)', type: 'AI-native IDE + plugins', pricing: 'Free-$60/mo', models: 'Claude Opus 4.6, GPT-5.3-Codex, Gemini 3 Flash', keyFeature: 'Acquired by Cognition ($250M), Arena Mode, Plan Mode' },
   { name: 'Cline', type: 'VS Code extension', pricing: 'Free (BYOK)', models: 'Any model (Claude, GPT, Gemini, local)', keyFeature: 'Open-source (29K+ stars), model-agnostic, ~$0.04/request' },
   { name: 'Aider', type: 'Terminal CLI', pricing: 'Free (open-source)', models: 'Any model via API or local', keyFeature: 'Git-native, best for incremental changes' },
   { name: 'Amazon Q Developer', type: 'IDE plugin', pricing: 'Free-$19/mo', models: 'Amazon models', keyFeature: 'Deep AWS integration, security scanning' },
