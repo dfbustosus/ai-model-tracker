@@ -2,9 +2,9 @@ import { TrendingUp, Clock } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 const comparisonData = [
-  { benchmark: 'SWE-bench', open: 80.2, closed: 80.9, openModel: 'MiniMax M2.5', closedModel: 'Claude Opus 4.5' },
-  { benchmark: 'AIME 2025', open: 96.0, closed: 100, openModel: 'DeepSeek V3.2', closedModel: 'GPT-5.2' },
-  { benchmark: 'GPQA Diamond', open: 86.0, closed: 93.8, openModel: 'Qwen3-235B', closedModel: 'Gemini 3 Deep Think' },
+  { benchmark: 'SWE-bench', open: 80.2, closed: 82.1, openModel: 'MiniMax M2.5', closedModel: 'Gemini 3 Deep Think' },
+  { benchmark: 'AIME 2025', open: 96.0, closed: 100, openModel: 'DeepSeek V3.2', closedModel: 'Gemini 3.1 Pro' },
+  { benchmark: 'GPQA Diamond', open: 88.4, closed: 94.3, openModel: 'Qwen 3.5', closedModel: 'Gemini 3.1 Pro' },
   { benchmark: 'LiveCodeBench', open: 85.0, closed: 85.0, openModel: 'Kimi K2.5', closedModel: 'GPT-5' },
 ];
 
