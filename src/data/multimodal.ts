@@ -8,6 +8,8 @@ export const modalityMatrix: ModalityEntry[] = [
   { model: 'Qwen 2.5-Omni', provider: 'Alibaba', textIn: true, imageIn: true, videoIn: true, audioIn: true, textOut: true, imageOut: false, audioOut: true, videoOut: false },
   { model: 'Phi-4-multimodal', provider: 'Microsoft', textIn: true, imageIn: true, videoIn: false, audioIn: true, textOut: true, imageOut: false, audioOut: false, videoOut: false },
   { model: 'Gemma 3n E4B', provider: 'Google', textIn: true, imageIn: true, videoIn: true, audioIn: true, textOut: true, imageOut: false, audioOut: false, videoOut: false },
+  { model: 'Qwen 3.5', provider: 'Alibaba', textIn: true, imageIn: true, videoIn: true, audioIn: false, textOut: true, imageOut: false, audioOut: false, videoOut: false },
+  { model: 'Gemini 3.1 Pro', provider: 'Google', textIn: true, imageIn: true, videoIn: true, audioIn: true, textOut: true, imageOut: true, audioOut: true, videoOut: false },
 ];
 
 export const videoGenModels = [
