@@ -64,9 +64,14 @@ export const modelReleases: ModelRelease[] = [
 
   // 2026
   { id: 'gpt-5.2-codex', date: '2026-01-14', provider: 'OpenAI', name: 'GPT-5.2-Codex', notable: 'SWE-bench Pro 56.4%, cybersecurity capabilities', category: 'coding' },
-  { id: 'minimax-m2.5', date: '2026-01-20', provider: 'MiniMax', name: 'MiniMax M2.5', notable: 'SWE-bench 80.2% (open-weight), competitive with Claude Opus', category: 'open-source' },
   { id: 'gemma-3-270m', date: '2026-02-01', provider: 'Google', name: 'Gemma 3 270M', params: '270M', license: 'Gemma TOU', notable: 'Ultra-compact, 0.75% battery per 25 chats', category: 'small' },
-  { id: 'claude-opus-4.6', date: '2026-02-05', provider: 'Anthropic', name: 'Claude Opus 4.6', context: '200K (1M beta, 128K output)', costInput: 5.00, costOutput: 25.00, notable: 'SWE-bench 80.8%, adaptive thinking', category: 'frontier', blogUrl: 'https://www.anthropic.com/news/claude-opus-4-6' },
-  { id: 'gpt-5.3-codex-spark', date: '2026-02-12', provider: 'OpenAI', name: 'GPT-5.3-Codex-Spark', notable: 'Latest Codex variant', category: 'coding' },
-  { id: 'gemini-3-deep-think', date: '2026-02-12', provider: 'Google', name: 'Gemini 3 Deep Think', notable: 'HLE 48.4%, ARC-AGI-2 84.6%, Codeforces 3455', category: 'reasoning' },
+  { id: 'gpt-5.3-codex', date: '2026-02-05', provider: 'OpenAI', name: 'GPT-5.3-Codex', context: '400K', costInput: 1.75, costOutput: 14.00, notable: 'SWE-bench Pro 56.8%, Terminal-Bench 75.1%, 25% faster', category: 'coding', blogUrl: 'https://openai.com/index/introducing-gpt-5-3-codex/' },
+  { id: 'claude-opus-4.6', date: '2026-02-05', provider: 'Anthropic', name: 'Claude Opus 4.6', context: '200K (1M beta, 128K output)', costInput: 5.00, costOutput: 25.00, notable: 'SWE-bench 80.8%, Agent Teams, adaptive thinking', category: 'frontier', blogUrl: 'https://www.anthropic.com/news/claude-opus-4-6' },
+  { id: 'glm-5', date: '2026-02-11', provider: 'Zhipu', name: 'GLM-5', params: '744B MoE (40B active)', context: '200K', license: 'MIT', costInput: 1.00, costOutput: 3.20, notable: 'SWE-bench 77.8%, trained on Huawei Ascend (no NVIDIA)', category: 'open-source' },
+  { id: 'minimax-m2.5', date: '2026-02-11', provider: 'MiniMax', name: 'MiniMax M2.5', params: '230B MoE (10B active)', context: '204K', license: 'MIT (modified)', costInput: 0.30, costOutput: 1.20, notable: 'SWE-bench 80.2% (open-weight), 1/20th cost of Opus', category: 'open-source' },
+  { id: 'gpt-5.3-codex-spark', date: '2026-02-12', provider: 'OpenAI', name: 'GPT-5.3-Codex-Spark', notable: 'Real-time coding on Cerebras, 1000+ tokens/sec', category: 'coding', blogUrl: 'https://openai.com/index/introducing-gpt-5-3-codex-spark/' },
+  { id: 'gemini-3-deep-think', date: '2026-02-12', provider: 'Google', name: 'Gemini 3 Deep Think', notable: 'HLE 48.4%, ARC-AGI-2 84.6%, Codeforces 3455, 18 unsolved problems solved', category: 'reasoning' },
+  { id: 'qwen-3.5', date: '2026-02-16', provider: 'Alibaba', name: 'Qwen 3.5', params: '397B MoE (17B active)', context: '262K', license: 'Apache 2.0', notable: 'Native multimodal, 201 languages, GPQA 88.4%', category: 'open-source' },
+  { id: 'claude-sonnet-4.6', date: '2026-02-17', provider: 'Anthropic', name: 'Claude Sonnet 4.6', context: '200K (1M beta)', costInput: 3.00, costOutput: 15.00, notable: 'SWE-bench 79.6%, near-Opus coding at 1/5 price', category: 'frontier', blogUrl: 'https://www.anthropic.com/news/claude-sonnet-4-6' },
+  { id: 'gemini-3.1-pro', date: '2026-02-19', provider: 'Google', name: 'Gemini 3.1 Pro', context: '1M', costInput: 2.00, costOutput: 12.00, notable: 'SWE-bench 80.6%, ARC-AGI-2 77.1%, GPQA 94.3%', category: 'frontier' },
 ];
