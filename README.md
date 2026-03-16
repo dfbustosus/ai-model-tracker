@@ -4,7 +4,7 @@
 
 ### The Complete 2025-2026 AI Model Landscape
 
-Track, compare, and visualize **65+ AI models** across benchmarks, pricing, and capabilities.
+Track, compare, and visualize **70+ AI models** across benchmarks, pricing, and capabilities.
 
 ### [**Visit Live Site**](https://dfbustosus.github.io/ai-model-tracker/)
 
@@ -28,17 +28,17 @@ Track, compare, and visualize **65+ AI models** across benchmarks, pricing, and 
 
 The AI model landscape changes weekly. New releases, new benchmarks, new pricing — scattered across dozens of blog posts, tweets, and papers. This project puts **everything in one place** with interactive visualizations so you can actually make informed decisions.
 
-> **Last updated:** March 2026 &mdash; Data from 15+ providers, 65+ model releases, 8 benchmark categories
+> **Last updated:** March 2026 &mdash; Data from 15+ providers, 70+ model releases, 8 benchmark categories
 
 ## Features
 
 | Section | What You Get |
 |---------|-------------|
-| **Timeline** | 65+ model releases (Dec 2024 - Mar 2026) with search, filter by category |
+| **Timeline** | 70+ model releases (Dec 2024 - Mar 2026) with search, filter by category |
 | **Benchmarks** | Interactive charts: LMArena Elo, SWE-bench Verified, AIME 2025, GPQA Diamond, ARC-AGI-2, HLE, Aider Polyglot, MMLU-Pro |
 | **Pricing** | 34 models compared side-by-side with table/chart toggle and tier filtering (Budget to Ultra) |
 | **Reasoning** | Architecture deep-dive: o3 vs DeepSeek R1 vs Claude Extended Thinking vs Gemini Deep Think vs QwQ-32B |
-| **Small Models** | 19 edge-deployable models under 10B params — from Gemma 3 270M to Qwen 3.5 Small 9B |
+| **Small Models** | 20 edge-deployable models under 10B params — from Gemma 3 270M to Qwen 3.5 Small 9B |
 | **Multimodal** | Input/output modality matrix + video gen (Sora 2, Veo 3) + image gen (Midjourney v7, FLUX.1) |
 | **Coding Tools** | 9 tools: GitHub Copilot, Cursor ($10B), Claude Code ($2.5B ARR), Windsurf, Cline, Aider |
 | **Local LLMs** | 7 tools for running models locally — Ollama, LM Studio, vLLM, llama.cpp |
@@ -95,11 +95,11 @@ src/
 │   └── ...              # 8 more section components
 ├── data/                # Pure TypeScript data layer
 │   ├── types.ts         # Interfaces + provider color map
-│   ├── models.ts        # 65+ model releases with full metadata
+│   ├── models.ts        # 70+ model releases with full metadata
 │   ├── benchmarks.ts    # Arena, SWE-bench, reasoning, Aider, MMLU
 │   ├── pricing.ts       # 34 models with input/output/tier
 │   ├── tools.ts         # Coding tools + local LLM tools
-│   ├── smallModels.ts   # 19 small language models
+│   ├── smallModels.ts   # 20 small language models
 │   └── multimodal.ts    # Modality matrix + video/image gen
 ├── App.tsx              # Main app with lazy loading + smooth scroll
 ├── main.tsx             # React root
@@ -130,13 +130,14 @@ src/
 | Microsoft | Phi-4, Phi-4-mini/reasoning | 3.8B beats 70B distills |
 | MiniMax | M2.5 | SWE-bench 80.2% (open-weight) |
 | Moonshot | Kimi K2.5 | LiveCodeBench 85% |
-| + more | Cohere, Zhipu, Amazon, Apple... | |
+| NVIDIA | Nemotron 3 Super/Nano | SWE-bench 60.5% (open) |
+| + more | Cohere, Zhipu, ByteDance, Lightricks... | |
 
 ### Key Numbers
 
 | Metric | Value |
 |--------|-------|
-| Models tracked | 65+ |
+| Models tracked | 70+ |
 | Benchmark categories | 8 |
 | Price range | 600x ($0.30 - $180/MTok) |
 | Providers | 15+ |
@@ -147,7 +148,7 @@ src/
 
 Want to showcase this on your site? See [EMBED.md](EMBED.md) for badges, widgets, and citation formats.
 
-[![AI Model Tracker](https://img.shields.io/badge/AI_Models-65%2B_Tracked-4f46e5?style=for-the-badge)](https://dfbustosus.github.io/ai-model-tracker/)
+[![AI Model Tracker](https://img.shields.io/badge/AI_Models-70%2B_Tracked-4f46e5?style=for-the-badge)](https://dfbustosus.github.io/ai-model-tracker/)
 
 ## Contributing
 
