@@ -1,7 +1,7 @@
 import { Brain, DollarSign, Zap, Globe } from 'lucide-react';
 
 const stats = [
-  { icon: Brain, label: 'Models Tracked', value: '65+', color: 'text-primary-400' },
+  { icon: Brain, label: 'Models Tracked', value: '70+', color: 'text-primary-400' },
   { icon: Zap, label: 'Benchmarks', value: '8', color: 'text-yellow-400' },
   { icon: DollarSign, label: 'Price Range', value: '600x', color: 'text-green-400' },
   { icon: Globe, label: 'Providers', value: '15+', color: 'text-blue-400' },
