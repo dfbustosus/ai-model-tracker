@@ -4,7 +4,7 @@ const news = [
   {
     icon: Merge,
     title: 'SpaceX Acquires xAI',
-    content: 'SpaceX acquired xAI (Feb 2, 2026) in a $1.25T combined valuation deal — the largest merger ever. Goal: orbital data centers for AI compute.',
+    content: 'SpaceX acquired xAI (Feb 2, 2026) in a $1.25T combined valuation — the largest merger ever. But by March, Musk admitted xAI "not built right," with 10 of 12 co-founders departed.',
     color: 'text-cyan-400',
   },
   {
@@ -28,7 +28,7 @@ const news = [
   {
     icon: Code,
     title: 'AI Coding: $5B+ Market',
-    content: 'Named 2026 Breakthrough Technology by MIT Technology Review. Cognition acquires Windsurf ($250M). Claude Code $2.5B ARR. Cursor 2.0 ships cloud agents.',
+    content: 'Named 2026 Breakthrough Technology by MIT Technology Review. Cursor v2.6 ships Automations + JetBrains. Claude Code adds Voice Mode (20 langs). Copilot CLI 1.0.5.',
     color: 'text-emerald-400',
   },
   {
@@ -40,7 +40,7 @@ const news = [
   {
     icon: UserX,
     title: 'Yann LeCun Leaves Meta',
-    content: 'Yann LeCun left Meta to found his own world-model AI lab, seeking a $5B valuation. A seismic shift in AI research leadership.',
+    content: 'Yann LeCun left Meta (Nov 2025) to found AMI Labs. Raised $1.03B seed (Mar 2026) to build world-model AI as an alternative to LLMs.',
     color: 'text-purple-400',
   },
   {
@@ -52,7 +52,7 @@ const news = [
   {
     icon: Globe,
     title: 'Chinese Models Rise',
-    content: 'GLM-5 (SWE-bench 77.8%), Qwen 3.5 (GPQA 88.4%), MiniMax M2.5 (SWE-bench 80.2%), Kimi K2.5 — all open-source, competitive with Western frontier models.',
+    content: 'MiniMax M2.5 (SWE-bench 80.2% at $0.27/$0.95), Qwen 3.5 Small 9B matches 120B-class, GLM-5 (77.8%), Qwen3-Coder-Next (SWE-bench 70.6%) — all open-source.',
     color: 'text-orange-400',
   },
 ];
