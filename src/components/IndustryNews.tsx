@@ -10,19 +10,19 @@ const news = [
   {
     icon: Building2,
     title: 'Record Funding',
-    content: 'Anthropic closed $30B at $380B valuation ($14B ARR). OpenAI assembling ~$100B round at $830B valuation. Both expected to IPO in H2 2026.',
+    content: 'Anthropic closed $30B at $380B valuation ($14B ARR). OpenAI valued at $500B+, assembling ~$100B round. Both expected to IPO in H2 2026.',
     color: 'text-primary-400',
   },
   {
     icon: Rocket,
     title: 'Stargate Project',
-    content: "$500B joint venture (OpenAI, SoftBank, Oracle, MGX) — $400B committed, ~7 GW data center capacity. Flagship Abilene, TX campus: 2M+ GB200 Blackwell chips.",
+    content: "$500B joint venture (OpenAI, SoftBank, Oracle, MGX). Abilene expansion canceled; shifted to multi-site strategy across 6+ states. $7.1B construction loan secured. UAE phase due Q3 2026.",
     color: 'text-yellow-400',
   },
   {
     icon: TrendingUp,
     title: 'Agentic AI Paradigm',
-    content: "Feb 2026: 7 frontier models launched in 28 days. Agent Teams (Claude), Codex on Cerebras (OpenAI), MCP now Linux Foundation standard.",
+    content: "Mar 2026: 12+ models launched in 7 days. GPT-5.4 adds Tool Search and Computer Use. Grok 4.20 hits 78% non-hallucination. MCP now Linux Foundation standard.",
     color: 'text-green-400',
   },
   {
@@ -58,9 +58,9 @@ const news = [
 ];
 
 const keyTakeaways = [
-  { title: 'Open-Closed Gap Vanished', desc: 'MiniMax M2.5 80.2% vs Claude Opus 80.9% SWE-bench. GLM-5, Qwen 3.5 match frontier at 1/10th cost.' },
-  { title: 'Reasoning = New Scaling', desc: 'Gemini 3.1 Pro 100% AIME, 77.1% ARC-AGI-2. Deep Think 84.6% ARC-AGI-2. 18 unsolved research problems solved.' },
-  { title: "Coding is AI's Killer App", desc: 'Claude Code $2.5B ARR, Agent Teams ship. Cursor 2.0, GPT-5.3-Codex on Cerebras at 1000+ tok/s.' },
+  { title: 'Open-Closed Gap Vanished', desc: 'MiniMax M2.5 80.2% vs Claude Opus 80.9% SWE-bench. Qwen 3.5 Small 9B matches 120B-class models.' },
+  { title: 'Reasoning = New Scaling', desc: 'GPT-5.4 introduces Tool Search for dynamic tool use. Grok 4.20 achieves 78% non-hallucination rate. 2M token contexts arrive.' },
+  { title: "Coding is AI's Killer App", desc: 'GPT-5.4 hits 57.7% SWE-Bench Pro. Claude Code $2.5B ARR. NVIDIA Nemotron Coalition launches at GTC.' },
 ];
 
 export function IndustryNews() {
