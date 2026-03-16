@@ -30,5 +30,9 @@ export const pricingData: PricingEntry[] = [
   { model: 'Grok 3', provider: 'xAI', inputCost: 3.00, outputCost: 15.00, context: '131K', tier: 'Premium' },
   { model: 'Claude Opus 4.5', provider: 'Anthropic', inputCost: 5.00, outputCost: 25.00, context: '200K-1M', tier: 'Premium' },
   { model: 'Claude Opus 4.6', provider: 'Anthropic', inputCost: 5.00, outputCost: 25.00, context: '200K-1M', tier: 'Premium' },
+  { model: 'Gemini 3.1 Flash Lite', provider: 'Google', inputCost: 0.25, outputCost: 1.50, context: '1M', tier: 'Budget' },
+  { model: 'Grok 4.20', provider: 'xAI', inputCost: 2.00, outputCost: 6.00, context: '2M', tier: 'High' },
+  { model: 'GPT-5.4', provider: 'OpenAI', inputCost: 2.50, outputCost: 15.00, context: '1M', tier: 'Premium' },
   { model: 'o3-pro', provider: 'OpenAI', inputCost: 20.00, outputCost: 80.00, context: '200K', tier: 'Ultra' },
+  { model: 'GPT-5.4 Pro', provider: 'OpenAI', inputCost: 30.00, outputCost: 180.00, context: '1M', tier: 'Ultra' },
 ];
