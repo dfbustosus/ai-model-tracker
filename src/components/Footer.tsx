@@ -30,7 +30,7 @@ export function Footer() {
               Made with <Heart className="w-3 h-3 text-red-400" /> for the AI community
             </div>
             <div className="text-surface-600">
-              Data current as of February 2026
+              Data current as of March 2026
             </div>
             <a
               href={REPO_URL}
