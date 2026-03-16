@@ -8,7 +8,7 @@ export function LocalLLMsSection() {
         <div className="flex items-start gap-3">
           <MonitorSmartphone className="w-5 h-5 text-blue-400 mt-0.5 shrink-0" />
           <div className="text-sm text-surface-200">
-            <p><strong className="text-white">RTX 4090 (24GB):</strong> 8B models at ~95 tok/s, 32B at ~34 tok/s. A quantized 70B fits in 24GB VRAM with 4-bit GGUF.</p>
+            <p><strong className="text-white">RTX 5090 (32GB):</strong> 8B models at ~213 tok/s (67% faster than 4090), 32B at ~61 tok/s. RTX 4090 (24GB): ~95 tok/s on 8B.</p>
             <p className="mt-1 text-surface-400">GGUF is the de facto standard for local deployment, supporting quantization from 1.5-bit to 8-bit.</p>
           </div>
         </div>
