@@ -17,19 +17,22 @@ export const reasoningBenchmarks: BenchmarkEntry[] = [
   { model: 'Grok 4.1', provider: 'xAI', aime2025: 91.0, gpqaDiamond: 87.2, sweBenchVerified: 74.5, hle: 35.2 },
   { model: 'DeepSeek R1', provider: 'DeepSeek', aime2025: 70.0, gpqaDiamond: 71.5, math500: 97.3, sweBenchVerified: 49.2, codeforcesElo: 2029 },
   { model: 'Claude Sonnet 4.5', provider: 'Anthropic', aime2025: 89.0, gpqaDiamond: 84.2, sweBenchVerified: 77.2, arcAgi2: 42.5 },
+  { model: 'GPT-5.4', provider: 'OpenAI', sweBenchVerified: 80.0, gpqaDiamond: 92.4 },
+  { model: 'Grok 4.20', provider: 'xAI', hle: 42.0 },
+  { model: 'Nemotron 3 Super', provider: 'NVIDIA', aime2025: 90.2, gpqaDiamond: 79.2, sweBenchVerified: 60.5, mmluPro: 83.7 },
 ];
 
 export const arenaLeaderboard: ArenaEntry[] = [
-  { rank: 1, model: 'Claude Opus 4.6', provider: 'Anthropic', elo: 1503 },
+  { rank: 1, model: 'Claude Opus 4.6', provider: 'Anthropic', elo: 1504 },
   { rank: 2, model: 'Gemini 3.1 Pro', provider: 'Google', elo: 1500 },
-  { rank: 3, model: 'Gemini 3 Pro', provider: 'Google', elo: 1498 },
-  { rank: 4, model: 'Grok 4.1', provider: 'xAI', elo: 1483 },
-  { rank: 5, model: 'Gemini 3 Flash', provider: 'Google', elo: 1471 },
-  { rank: 6, model: 'Claude Opus 4.5', provider: 'Anthropic', elo: 1467 },
-  { rank: 7, model: 'GPT-5.2', provider: 'OpenAI', elo: 1464 },
-  { rank: 8, model: 'Claude Sonnet 4.6', provider: 'Anthropic', elo: 1460 },
-  { rank: 9, model: 'GPT-5.1', provider: 'OpenAI', elo: 1458 },
-  { rank: 10, model: 'Grok 4', provider: 'xAI', elo: 1452 },
+  { rank: 3, model: 'Grok 4.20', provider: 'xAI', elo: 1493 },
+  { rank: 4, model: 'Gemini 3 Pro', provider: 'Google', elo: 1485 },
+  { rank: 5, model: 'GPT-5.4', provider: 'OpenAI', elo: 1480 },
+  { rank: 6, model: 'Gemini 3 Flash', provider: 'Google', elo: 1473 },
+  { rank: 7, model: 'Grok 4.1', provider: 'xAI', elo: 1473 },
+  { rank: 8, model: 'Claude Opus 4.5', provider: 'Anthropic', elo: 1467 },
+  { rank: 9, model: 'GPT-5.2', provider: 'OpenAI', elo: 1464 },
+  { rank: 10, model: 'Claude Sonnet 4.6', provider: 'Anthropic', elo: 1460 },
 ];
 
 export const codingArena: ArenaEntry[] = [

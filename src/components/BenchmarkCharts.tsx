@@ -40,7 +40,7 @@ export function BenchmarkCharts() {
         {activeTab === 'arena' && (
           <div>
             <h3 className="text-lg font-semibold text-white mb-1">LMArena Elo Ratings</h3>
-            <p className="text-xs text-surface-400 mb-6">Feb 2026, 5.27M votes</p>
+            <p className="text-xs text-surface-400 mb-6">Mar 2026, 5.4M+ votes</p>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={arenaLeaderboard} layout="vertical" margin={{ left: 0, right: 20 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
@@ -63,7 +63,7 @@ export function BenchmarkCharts() {
         {activeTab === 'swebench' && (
           <div>
             <h3 className="text-lg font-semibold text-white mb-1">SWE-bench Verified</h3>
-            <p className="text-xs text-surface-400 mb-6">Top 10, Feb 2026</p>
+            <p className="text-xs text-surface-400 mb-6">Top 10, Mar 2026</p>
             <ResponsiveContainer width="100%" height={400}>
               <BarChart data={sweBenchLeaderboard} layout="vertical" margin={{ left: 0, right: 20 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />

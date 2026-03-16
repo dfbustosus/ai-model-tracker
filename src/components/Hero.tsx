@@ -21,7 +21,7 @@ export function Hero({ onNavigate }: HeroProps) {
             The Complete 2025-2026 Landscape
           </p>
           <p className="text-sm text-surface-500 max-w-xl mx-auto mb-8">
-            Compare 90+ models across benchmarks, pricing, and capabilities. From Gemini 3.1 Pro to Claude Sonnet 4.6 to GLM-5.
+            Compare 70+ models across benchmarks, pricing, and capabilities. From GPT-5.4 to Claude Opus 4.6 to Grok 4.20.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap mb-6">
             <button
@@ -39,7 +39,7 @@ export function Hero({ onNavigate }: HeroProps) {
           </div>
           <div className="flex items-center justify-center gap-2 mb-6">
             <a
-              href="https://twitter.com/intent/tweet?text=AI%20Model%20Tracker%20%E2%80%93%20Track%2060%2B%20AI%20models%20with%20benchmarks%2C%20pricing%2C%20and%20papers&url=https://dfbustosus.github.io/ai-model-tracker/"
+              href="https://twitter.com/intent/tweet?text=AI%20Model%20Tracker%20%E2%80%93%20Track%2070%2B%20AI%20models%20with%20benchmarks%2C%20pricing%2C%20and%20papers&url=https://dfbustosus.github.io/ai-model-tracker/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-800/50 text-surface-400 hover:text-white hover:bg-surface-700 transition-colors text-xs"

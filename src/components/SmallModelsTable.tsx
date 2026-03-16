@@ -9,7 +9,7 @@ export function SmallModelsTable() {
           <Smartphone className="w-5 h-5 text-primary-400 mt-0.5 shrink-0" />
           <div>
             <p className="text-sm text-surface-200">
-              <strong className="text-white">Key Trend:</strong> Qwen3 4B in thinking mode rivals Qwen2.5-72B, a 18x parameter advantage eliminated through reasoning-time compute. Gemma 3n achieves 5B-model quality with just 2B active memory.
+              <strong className="text-white">Key Trend:</strong> Qwen 3.5 Small 9B matches 120B-class models via native multimodal and reasoning optimizations. Gemma 3n achieves 5B-model quality with just 2B active memory.
             </p>
           </div>
         </div>

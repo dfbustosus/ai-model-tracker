@@ -17,4 +17,8 @@ export const smallModels: SmallModel[] = [
   { name: 'Ministral 3 (3B)', provider: 'Mistral', params: '3.4B', release: 'Dec 2025', context: '256K', license: 'Apache 2.0', keyStrength: 'Vision+text, edge-first, reasoning variant', target: 'Drones, robots, phones' },
   { name: 'Ministral 3 (8B)', provider: 'Mistral', params: '8B', release: 'Dec 2025', context: '256K', license: 'Apache 2.0', keyStrength: 'Multimodal, 3 variants per size', target: 'Laptop, single GPU' },
   { name: 'DeepSeek R1-Distill 7B', provider: 'DeepSeek', params: '7B', release: 'Jan 2025', context: '128K', license: 'MIT', keyStrength: 'Reasoning from R1, Qwen2.5 base', target: 'Self-hosted reasoning' },
+  { name: 'Tiny Aya', provider: 'Cohere', params: '3.35B', release: 'Feb 2026', context: '-', license: 'Open weights', keyStrength: '70+ languages, offline/on-device', target: 'Multilingual, mobile' },
+  { name: 'Qwen 3.5 Small (0.8B)', provider: 'Alibaba', params: '0.8B', release: 'Mar 2026', context: '128K', license: 'Apache 2.0', keyStrength: 'Native multimodal, on-device agents', target: 'IoT, embedded' },
+  { name: 'Qwen 3.5 Small (4B)', provider: 'Alibaba', params: '4B', release: 'Mar 2026', context: '128K', license: 'Apache 2.0', keyStrength: 'Matches 50B+ models in reasoning', target: 'Laptop, mobile' },
+  { name: 'Qwen 3.5 Small (9B)', provider: 'Alibaba', params: '9B', release: 'Mar 2026', context: '128K', license: 'Apache 2.0', keyStrength: 'Matches 120B-class, multimodal', target: 'Desktop, single GPU' },
 ];

@@ -4,7 +4,7 @@
 
 ### The Complete 2025-2026 AI Model Landscape
 
-Track, compare, and visualize **80+ AI models** across benchmarks, pricing, and capabilities.
+Track, compare, and visualize **70+ AI models** across benchmarks, pricing, and capabilities.
 
 ### [**Visit Live Site**](https://dfbustosus.github.io/ai-model-tracker/)
 
@@ -20,7 +20,7 @@ Track, compare, and visualize **80+ AI models** across benchmarks, pricing, and 
 
 ---
 
-**GPT-5.2 vs Gemini 3 Deep Think vs Claude Opus 4.6 vs DeepSeek V3.2** — which model wins on which benchmark, and at what cost? Stop Googling. Start tracking.
+**GPT-5.4 vs Claude Opus 4.6 vs Grok 4.20 vs Gemini 3.1 Pro** — which model wins on which benchmark, and at what cost? Stop Googling. Start tracking.
 
 </div>
 
@@ -28,22 +28,22 @@ Track, compare, and visualize **80+ AI models** across benchmarks, pricing, and 
 
 The AI model landscape changes weekly. New releases, new benchmarks, new pricing — scattered across dozens of blog posts, tweets, and papers. This project puts **everything in one place** with interactive visualizations so you can actually make informed decisions.
 
-> **Last updated:** February 2026 &mdash; Data from 14+ providers, 60+ model releases, 8 benchmark categories
+> **Last updated:** March 2026 &mdash; Data from 15+ providers, 70+ model releases, 8 benchmark categories
 
 ## Features
 
 | Section | What You Get |
 |---------|-------------|
-| **Timeline** | 60+ model releases (Dec 2024 - Feb 2026) with search, filter by category |
+| **Timeline** | 70+ model releases (Dec 2024 - Mar 2026) with search, filter by category |
 | **Benchmarks** | Interactive charts: LMArena Elo, SWE-bench Verified, AIME 2025, GPQA Diamond, ARC-AGI-2, HLE, Aider Polyglot, MMLU-Pro |
-| **Pricing** | 28 models compared side-by-side with table/chart toggle and tier filtering (Budget to Ultra) |
+| **Pricing** | 34 models compared side-by-side with table/chart toggle and tier filtering (Budget to Ultra) |
 | **Reasoning** | Architecture deep-dive: o3 vs DeepSeek R1 vs Claude Extended Thinking vs Gemini Deep Think vs QwQ-32B |
-| **Small Models** | 16 edge-deployable models under 10B params — from Gemma 3 270M to Qwen3 8B |
+| **Small Models** | 20 edge-deployable models under 10B params — from Gemma 3 270M to Qwen 3.5 Small 9B |
 | **Multimodal** | Input/output modality matrix + video gen (Sora 2, Veo 3) + image gen (Midjourney v7, FLUX.1) |
 | **Coding Tools** | 9 tools: GitHub Copilot, Cursor ($10B), Claude Code ($2.5B ARR), Windsurf, Cline, Aider |
 | **Local LLMs** | 7 tools for running models locally — Ollama, LM Studio, vLLM, llama.cpp |
 | **Open vs Closed** | Gap analysis with bar charts — open models now trail by just ~3 months |
-| **Industry** | $30B Anthropic round, $500B Stargate project, Yann LeCun's new lab, $2T market cap evaporation |
+| **Industry** | $30B Anthropic round, Stargate multi-site pivot, Yann LeCun's new lab, $2T market cap evaporation |
 
 ## Quick Start
 
@@ -95,11 +95,11 @@ src/
 │   └── ...              # 8 more section components
 ├── data/                # Pure TypeScript data layer
 │   ├── types.ts         # Interfaces + provider color map
-│   ├── models.ts        # 60+ model releases with full metadata
+│   ├── models.ts        # 70+ model releases with full metadata
 │   ├── benchmarks.ts    # Arena, SWE-bench, reasoning, Aider, MMLU
-│   ├── pricing.ts       # 28 models with input/output/tier
+│   ├── pricing.ts       # 34 models with input/output/tier
 │   ├── tools.ts         # Coding tools + local LLM tools
-│   ├── smallModels.ts   # 16 small language models
+│   ├── smallModels.ts   # 20 small language models
 │   └── multimodal.ts    # Modality matrix + video/image gen
 ├── App.tsx              # Main app with lazy loading + smooth scroll
 ├── main.tsx             # React root
@@ -115,39 +115,40 @@ src/
 
 ## Data Coverage
 
-### Providers Tracked (14+)
+### Providers Tracked (15+)
 
 | Provider | Models | Notable |
 |----------|--------|---------|
-| OpenAI | GPT-5.x, o3/o4, GPT-4.1 | AIME 100% (GPT-5.2) |
+| OpenAI | GPT-5.x, GPT-5.4, o3/o4, GPT-4.1 | SWE-Bench Pro 57.7% (GPT-5.4) |
 | Anthropic | Claude 3.7 through Opus 4.6 | SWE-bench #1 (80.8%) |
 | Google | Gemini 2.0/2.5/3, Gemma 3/3n | ARC-AGI-2 84.6% (Deep Think) |
 | DeepSeek | V3/V3.1/V3.2, R1 | $0.42/MTok output, MIT license |
 | Meta | Llama 3.3, 4 Scout/Maverick | 10M context (Scout) |
 | Mistral | Small 3, Large 3, Ministral 3 | 675B MoE, Apache 2.0 |
-| xAI | Grok 3, 4, 4.1 | LMArena #2 |
+| xAI | Grok 3, 4, 4.1, 4.20 | LMArena #3 |
 | Alibaba | Qwen 2.5/3, Omni | 119 languages |
 | Microsoft | Phi-4, Phi-4-mini/reasoning | 3.8B beats 70B distills |
 | MiniMax | M2.5 | SWE-bench 80.2% (open-weight) |
 | Moonshot | Kimi K2.5 | LiveCodeBench 85% |
-| + more | Cohere, Zhipu, Amazon, Apple... | |
+| NVIDIA | Nemotron 3 Super/Nano | SWE-bench 60.5% (open) |
+| + more | Cohere, Zhipu, ByteDance, Lightricks... | |
 
 ### Key Numbers
 
 | Metric | Value |
 |--------|-------|
-| Models tracked | 60+ |
+| Models tracked | 70+ |
 | Benchmark categories | 8 |
-| Price range | 570x ($0.14 - $80/MTok) |
-| Providers | 14+ |
+| Price range | 600x ($0.30 - $180/MTok) |
+| Providers | 15+ |
 | Open vs closed gap | ~3 months |
-| Data currency | February 2026 |
+| Data currency | March 2026 |
 
 ## Embed & Share
 
 Want to showcase this on your site? See [EMBED.md](EMBED.md) for badges, widgets, and citation formats.
 
-[![AI Model Tracker](https://img.shields.io/badge/AI_Models-60%2B_Tracked-4f46e5?style=for-the-badge)](https://dfbustosus.github.io/ai-model-tracker/)
+[![AI Model Tracker](https://img.shields.io/badge/AI_Models-70%2B_Tracked-4f46e5?style=for-the-badge)](https://dfbustosus.github.io/ai-model-tracker/)
 
 ## Contributing
 
