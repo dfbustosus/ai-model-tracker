@@ -6,7 +6,7 @@ export const pricingData: PricingEntry[] = [
   { model: 'GPT-4.1 nano', provider: 'OpenAI', inputCost: 0.10, outputCost: 0.40, context: '1M', tier: 'Budget' },
   { model: 'Mistral Small 3', provider: 'Mistral', inputCost: 0.10, outputCost: 0.30, context: '32K', tier: 'Budget' },
   { model: 'DeepSeek V3.2', provider: 'DeepSeek', inputCost: 0.28, outputCost: 0.42, context: '128K', tier: 'Budget' },
-  { model: 'MiniMax M2.5', provider: 'MiniMax', inputCost: 0.30, outputCost: 1.20, context: '204K', tier: 'Budget' },
+  { model: 'MiniMax M2.5', provider: 'MiniMax', inputCost: 0.27, outputCost: 0.95, context: '196K', tier: 'Budget' },
   { model: 'Grok 3 Mini', provider: 'xAI', inputCost: 0.30, outputCost: 0.50, context: '131K', tier: 'Budget' },
   { model: 'GPT-4.1 mini', provider: 'OpenAI', inputCost: 0.40, outputCost: 1.60, context: '1M', tier: 'Budget' },
   { model: 'Gemini 2.5 Flash', provider: 'Google', inputCost: 0.30, outputCost: 2.50, context: '1M', tier: 'Mid' },
