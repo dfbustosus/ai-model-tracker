@@ -56,7 +56,7 @@ function App() {
             <SectionWrapper
               id="timeline"
               title="Model Release Timeline"
-              subtitle="Every significant AI model release from December 2024 through February 2026, ordered chronologically."
+              subtitle="Every significant AI model release from December 2024 through March 2026, ordered chronologically."
               badge="Timeline"
             >
               <Timeline />
@@ -87,7 +87,7 @@ function App() {
             <SectionWrapper
               id="pricing"
               title="API Pricing Comparison"
-              subtitle="A 570x cost range: from $0.14/MTok (DeepSeek V3.2) to $80/MTok (o3-pro). Pricing as of February 2026."
+              subtitle="A 600x cost range: from $0.30/MTok (Mistral Small 3) to $180/MTok (GPT-5.4 Pro). Pricing as of March 2026."
               badge="Pricing"
             >
               <ErrorBoundary fallbackTitle="Failed to load pricing">
