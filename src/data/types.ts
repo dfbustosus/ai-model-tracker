@@ -3,7 +3,7 @@ export type Provider =
   | 'Mistral' | 'xAI' | 'Alibaba' | 'Microsoft' | 'Cohere'
   | 'MiniMax' | 'Moonshot' | 'Zhipu' | 'Apple'
   | 'Stability AI' | 'Black Forest Labs' | 'Midjourney' | 'Runway'
-  | 'Kuaishou' | 'Amazon';
+  | 'Kuaishou' | 'Amazon' | 'NVIDIA';
 
 export interface ModelRelease {
   id: string;
@@ -112,4 +112,5 @@ export const PROVIDER_COLORS: Record<string, string> = {
   'Moonshot': '#06b6d4',      // Bright cyan
   'Zhipu': '#ef4444',         // Vibrant red
   'Apple': '#94a3b8',         // Light slate gray
+  'NVIDIA': '#76b900',         // NVIDIA green
 };
